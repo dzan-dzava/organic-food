@@ -5,7 +5,7 @@
   --black-light: #636363;
   --black-dark: #333333;
   --white: #ffffff;
-  --gray: #eeeeee
+  --gray: #eeeeee;
 }
 
 /* fonts setup */
@@ -76,7 +76,7 @@ html {
   display: block;
   padding: 5px 10px;
   color: var(--black-dark);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   line-height: 26px;
@@ -109,7 +109,77 @@ html {
 
 /* heading */
 .heading {
-
+  height: 100vh;
+  background-image: url('../img//heading-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 0 15px;
+}
+.heading .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 75px;
+}
+.heading .title {
+  color: var(--black-dark);
+  font-size: 2.125rem;
+  font-family: "Lobster Two", cursive;
+  line-height: 45px;
+  margin-bottom: 35px;
+}
+.heading .text {
+  color: var(--black-dark);
+  font-size: 0.875rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.heading .buttons a {
+  display: inline-block;
+  margin: 6px;
+  background-color: var(--green-light);
+  border-radius: 50px;
+  padding: 8px 20px;
+  color: var(--white);
+  font-size: 0.875rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 21px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.heading .buttons a.white {
+  background-color: var(--white);
+  color: var(--green-light);
+}
+.heading .buttons a::after {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px solid var(--green-light);
+  border-radius: 50px;
+  transition: all 0.5s ease-in-out;
+}
+.heading .buttons a.white::after {
+  border-color: var(--white);;
+}
+.heading .buttons a:hover {
+  background-color: var(--green-dark);
+}
+.heading .buttons a.white:hover {
+  background-color: var(--black-dark);
+  color: var(--white);
+}
+.heading .buttons a:hover::after {
+  border-color: var(--green-dark);
+}
+.heading .buttons a.white:hover::after {
+  border-color: var(--black-light);
 }
 
 /* 480px and upper */
@@ -118,11 +188,32 @@ html {
     max-width: 450px;
   }
 
+  .header {
+    padding: 0;
+  }
+
+  .heading {
+    padding: 0;
+  }
   .header .container {
     height: 88px;
   }
   .header .nav {
     top: 88px;
+  }
+
+  .heading .title {
+    font-size: 3.25rem;
+    line-height: 62px;
+  }
+  .heading .text {
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 26px;
+  }
+  .heading .buttons a {
+    font-size: 1rem;
+    line-height: 26px;
   }
 }
 
@@ -135,6 +226,11 @@ html {
   .header .logo {
     width: 135px;
     height: 40px;
+  }
+
+  .heading .title {
+    font-size: 3.75rem;
+    line-height: 72px;
   }
 }
 
@@ -159,11 +255,31 @@ html {
   .header .menu-toggler {
     display: none;
   }
+
+  .heading .title {
+    font-size: 4.25rem;
+    line-height: 81px;
+  }
+  .heading .text {
+    max-width: 720px;
+  }
 }
 
 /* 1280px and upper */
 @media only screen and (min-width: 1280px) {
   .container {
     max-width: 1200px;
+  }
+
+  .heading .title {
+    font-size: 4.5rem;
+    line-height: 86px;
+    margin-bottom: 40px;
+  }
+  .heading .text {
+    margin-bottom: 35px;
+  }
+  .heading .buttons a {
+    line-height: 30px;
   }
 }
