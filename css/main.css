@@ -1,0 +1,15 @@
+/* Fonts Setup */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf')  format('truetype')
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Medium.ttf')  format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Lobster Two';
+  src: url('../fonts/LobsterTwo-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
