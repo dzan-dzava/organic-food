@@ -278,6 +278,9 @@ html {
   transition: all 0.5s ease-in-out;
   font-family: 'Poppins', sans-serif;
 }
+.why-us .box:hover {
+  border-color: var(--green-light);
+}
 .why-us .boxes-wrapper:first-child,
 .why-us .box:first-child {
   margin-bottom: 15px;
