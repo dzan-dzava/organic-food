@@ -27,7 +27,7 @@ $('#galleryGrid').magnificPopup({
   }
 });
 
-$("#partnersCarousel").owlCarousel({
+const owl = $("#partnersCarousel").owlCarousel({
   loop: true,
   dots: false,
   autoplay: true,
@@ -54,4 +54,10 @@ $("#partnersCarousel").owlCarousel({
       items: 5
     }
   }
+});
+
+// reset autoplay time after user action
+owl.on('changed.owl.carousel', function() {
+  owl.trigger('stop.owl.autoplay');
+  owl.trigger('play.owl.autoplay');
 });
