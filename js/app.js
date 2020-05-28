@@ -17,3 +17,12 @@ $('#menuToggler').on('click', function() {
 
   menuIsOpen = !menuIsOpen;
 });
+
+// photo popup
+$('#galleryGrid').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  gallery: {
+    enabled: true
+  }
+});

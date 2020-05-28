@@ -466,7 +466,20 @@ html {
 
 /* gallery */
 .gallery {
-
+  padding: 30px 15px;
+  background-color: var(--gray-light);
+}
+.gallery .title {
+  color: var(--black-dark);
+  font-size: 1.375rem;
+  font-family: 'Lobster Two', cursive;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.gallery .grid {
+  display: grid;
+  grid-gap: 30px;
 }
 
 /* 480px and upper */
@@ -579,6 +592,24 @@ html {
     line-height: 20px;
     height: 40px;
   }
+
+  .gallery {
+    padding: 30px 0;
+  }
+  .gallery .title {
+    font-size: 1.625rem;
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
+  .gallery .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery .grid a {
+    grid-column: span 2;
+  }
+  .gallery .grid a:last-child {
+    grid-column: 2 / span 2;
+  }
 }
 
 /* 768px and upper */
@@ -676,6 +707,14 @@ html {
   .products .product .title {
     height: auto;
   }
+
+  .gallery {
+    padding: 50px 0;
+  }
+  .gallery .title {
+    font-size: 1.625rem;
+    line-height: 31px;
+  }
 }
 
 /* 1024px and upper */
@@ -762,6 +801,22 @@ html {
   .products .col {
     flex: 0 0 calc(100% / 3);
   }
+
+  .gallery {
+    padding: 80px 0;
+  }
+  .gallery .title {
+    font-size: 1.875rem;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+  .gallery .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gallery .grid a,
+  .gallery .grid a:last-child {
+    grid-column: auto;
+  }
 }
 
 /* 1280px and upper */
@@ -839,5 +894,13 @@ html {
   }
   .products .product .title {
     margin-bottom: 15px;
+  }
+
+  .gallery {
+    padding: 100px 0;
+  }
+  .gallery .title {
+    font-size: 2.5rem;
+    line-height: 48px;
   }
 }
