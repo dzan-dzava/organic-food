@@ -1,7 +1,17 @@
 let menuIsOpen = false;
+let isScrolling = false;
 
 // load particles
 particlesJS.load('particles', 'data/particles.json');
+
+// minimize header on scroll
+$(window).on('scroll', function() {  
+  if($(this).scrollTop() > 0) {
+      $('.header').addClass('minimized');
+  } else {
+      $('.header').removeClass('minimized');
+  }
+});
 
 // menu toggle
 $('#menuToggler').on('click', function() {
@@ -17,6 +27,29 @@ $('#menuToggler').on('click', function() {
 
   menuIsOpen = !menuIsOpen;
 });
+
+$('#headerNav a').on('click', function(e) {
+  e.preventDefault();
+
+  if (isScrolling) {
+    return;
+  }
+
+  if (menuIsOpen) {
+    menuIsOpen = false;
+    $('#headerNav').height(0);
+    $('#menuOpenIcon').show();
+    $('#menuCloseIcon').hide();
+  }
+
+  isScrolling = true;
+  
+  $("html, body").animate({
+    scrollTop: $(`#${e.target.getAttribute('data-id')}`).offset().top
+  }, 1000, function() {
+    isScrolling = false;
+  });
+})
 
 // photo popup
 $('#galleryGrid').magnificPopup({
