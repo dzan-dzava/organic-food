@@ -482,6 +482,22 @@ html {
   display: grid;
   grid-gap: 30px;
 }
+.gallery .grid a {
+  position: relative;
+}
+.gallery .grid a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0;
+  transition: height 0.35s ease;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gallery .grid a:hover::after {
+  height: 100%;
+}
 
 /* partners */
 .partners {
