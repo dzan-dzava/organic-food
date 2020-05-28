@@ -26,3 +26,32 @@ $('#galleryGrid').magnificPopup({
     enabled: true
   }
 });
+
+$("#partnersCarousel").owlCarousel({
+  loop: true,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  nav: true,
+  mouseDrag: false,
+  touchDrag: false,
+  navText: [
+    '<img src="img/prev.svg">',
+    '<img src="img/next.svg">'
+  ],
+  margin: 30,
+  responsive: {
+    0: {
+      items: 2
+    },
+    768: {
+      items: 3
+    },
+    1024: {
+      items: 4
+    },
+    1200: {
+      items: 5
+    }
+  }
+});
