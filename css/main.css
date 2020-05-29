@@ -493,10 +493,27 @@ html {
   top: 0;
   height: 0;
   transition: height 0.35s ease;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .gallery .grid a:hover::after {
   height: 100%;
+}
+.gallery .grid a .zoom-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background: url('../img/zoom.svg') center/contain no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+.gallery .grid a:hover .zoom-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* partners */
