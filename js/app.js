@@ -1,6 +1,8 @@
 let menuIsOpen = false;
 let isScrolling = false;
 
+new WOW().init();
+
 // load particles
 particlesJS.load('particles', 'data/particles.json');
 
