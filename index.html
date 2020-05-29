@@ -14,6 +14,7 @@
   <script defer src="js/jquery.magnific-popup.min.js"></script>
   <script defer src="js/owl.carousel.min.js"></script>
   <script defer src="js/wow.min.js"></script>
+  <script defer src="js/parallax.min.js"></script>
   <script defer src="js/app.js"></script>
 </head>
 <body>
@@ -72,6 +73,12 @@
   <section class="heading" id="headingEl">
     <div id="particles"></div>
 
+    <div id="parallax">
+      <div data-depth="0.6">
+        <img src="img/strawberry.png" alt="Strawberry">
+      </div>
+    </div>
+
     <div class="container">
       <h1 class="title wow animate__animated animate__fadeInDown">Fresh & Organic Fruits.</h1>
       <p class="text wow animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
@@ -121,11 +128,11 @@
     <img class="cocktail-img" src="img/why-us/orange-cocktail.png" alt="Orange Cocktail">
 
     <div class="container">
-      <h2 class="title wow animate__animated animate__fadeInUp">Why Choose Us</h2>
+      <h2 class="title wow animate__animated animate__fadeInUp" data-wow-delay="0.15s">Why Choose Us</h2>
       <p class="text wow animate__animated animate__fadeInUp" data-wow-delay="0.15s">Lorem ipsum dolor sit amet, consectetur blandit magna adipiscing elit.</p>
 
       <div class="boxes">
-        <div class="boxes-wrapper wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+        <div class="boxes-wrapper wow animate__animated animate__fadeIn" data-wow-delay="0.25s">
           <div class="box">
             <div class="icon">
               <img src="img/why-us/icon1.png" alt="Natural Organic Fruits">
@@ -147,7 +154,7 @@
           </div>
         </div>
 
-        <div class="boxes-wrapper wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+        <div class="boxes-wrapper wow animate__animated animate__fadeIn" data-wow-delay="0.25s">
           <div class="box">
             <div class="icon">
               <img src="img/why-us/icon3.png" alt="100% Organic Juices">
@@ -195,7 +202,7 @@
     <div class="container">
       <h2 class="title">Our Products</h2>
 
-      <div class="row wow animate__animated animate__fadeIn">
+      <div class="row wow animate__animated animate__fadeIn" data-wow-delay="0.25s">
         <div class="col">
           <a class="product" href="#">
             <span class="sale">SALE</span>

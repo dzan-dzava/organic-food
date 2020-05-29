@@ -1,7 +1,12 @@
 let menuIsOpen = false;
 let isScrolling = false;
 
+// animate on scroll
 new WOW().init();
+
+// parallax setup
+const scene = document.getElementById('parallax');
+const parallax = new Parallax(scene);
 
 // load particles
 particlesJS.load('particles', 'data/particles.json');
@@ -28,6 +33,19 @@ $('#menuToggler').on('click', function() {
   }
 
   menuIsOpen = !menuIsOpen;
+});
+
+$(window).on('resize', function() {
+  console.log(this);
+  if (window.innerWidth >= 1024) {
+    $('#headerNav').height('auto');
+  } else {
+    if (menuIsOpen) {
+      $('#headerNav').height($('#headerNav')[0].scrollHeight)
+    } else {
+      $('#headerNav').height(0);
+    }
+  }
 });
 
 $('#headerNav a').on('click', function(e) {
