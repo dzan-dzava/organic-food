@@ -28,43 +28,6 @@
   font-weight: 700;
 }
 
-/* animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-.animate-fadeInDown {
-  animation-name: fadeInDown;
-  animation-duration: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-.animate-fadeInUp {
-  animation-name: fadeInUp;
-  animation-duration: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
 /* common */
 html {
   font-size: 16px;
@@ -1282,5 +1245,11 @@ html {
   }
   .footer .contact-info h3 {
     font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-height: 768px) {
+  #parallax {
+    bottom: 0;
   }
 }

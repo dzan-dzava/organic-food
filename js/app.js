@@ -36,7 +36,6 @@ $('#menuToggler').on('click', function() {
 });
 
 $(window).on('resize', function() {
-  console.log(this);
   if (window.innerWidth >= 1024) {
     $('#headerNav').height('auto');
   } else {
