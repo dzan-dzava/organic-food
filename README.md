@@ -1,2 +1,3 @@
-# organic-food-landing-page
+# Organic Food
 Organic Food Landing Page
+Mobile First Approach
