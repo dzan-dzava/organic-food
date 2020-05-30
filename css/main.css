@@ -134,7 +134,7 @@ html {
 }
 #parallax {
   display: none;
-  position: absolute;
+  position: absolute !important;
   bottom: 140px;
   right: 0;
   z-index: 2;
